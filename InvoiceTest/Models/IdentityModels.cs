@@ -16,12 +16,7 @@ namespace InvoiceTest.Models
         {
         }
 
-        public DbSet<Music> Musics { get; set; }
-    }
-
-    public class Music
-    {
-        public int Id { get; set; }
-        public string Title { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<OnInvoice> OnInvoices { get; set; }
     }
 }

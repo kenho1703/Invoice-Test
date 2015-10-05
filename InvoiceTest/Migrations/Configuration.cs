@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using InvoiceTest.Models;
 
 namespace InvoiceTest.Migrations
@@ -28,6 +29,21 @@ namespace InvoiceTest.Migrations
 
                 manager.Create(user, "password");
             }
+            var products = new List<Product>
+            {
+                new Product { Description = "iPhone 5 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "iPad mini with Wi-Fi 32GB - White & Silver",   Price = 740}, 
+                new Product { Description = "iPhone 6 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "iPhone 5S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "iPhone 6S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "Nokia Lumina 720",   Price = 740}, 
+                new Product { Description = "Galaxy Note 5",   Price = 740}, 
+                new Product { Description = "iPhone 4 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "iPhone 6 Plus 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Description = "Nokia 1280",   Price = 740},
+            };
+            products.ForEach(s => context.Products.AddOrUpdate(p => p.Description, s));
+            context.SaveChanges();
         }
     }
 }
