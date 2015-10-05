@@ -16,14 +16,12 @@ namespace InvoiceTest.Models
         {
         }
 
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Music> Musics { get; set; }
     }
 
-    public class Movie
+    public class Music
     {
         public int Id { get; set; }
         public string Title { get; set; }
-
-
     }
 }

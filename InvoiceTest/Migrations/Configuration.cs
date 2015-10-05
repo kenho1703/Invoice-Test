@@ -15,7 +15,7 @@ namespace InvoiceTest.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "Identity.Models.ApplicationDbContext";
+            ContextKey = "InvoiceTest.Models.ApplicationDbContext";
         }
 
         protected override void Seed(ApplicationDbContext context)
