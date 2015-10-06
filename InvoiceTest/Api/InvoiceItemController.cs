@@ -13,7 +13,13 @@ namespace InvoiceTest.Api
     [Authorize, RoutePrefix("api/onInvoices")]
     public class InvoiceItemController : ApiController
     {
-        private readonly IInvoiceItemRepository _invoiceItemRepository = new InvoiceItemRepository();
+       // private readonly IInvoiceItemRepository _invoiceItemRepository = new InvoiceItemRepository();
+        private readonly IInvoiceItemRepository _invoiceItemRepository;
+
+        public InvoiceItemController(IInvoiceItemRepository invoiceItemRepository)
+        {
+            _invoiceItemRepository = invoiceItemRepository;
+        }
 
         [HttpGet,Route("")]
         // GET api/<controller>
