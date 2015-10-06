@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace InvoiceTest.Controllers
 {
+
     public class HomeController : Controller
     {
+            [Authorize]
         public ActionResult Index()
         {
             return View();
