@@ -15,7 +15,7 @@ namespace InvoiceTest.Models
         public float Total { get; set; }
         public float Shipping { get; set; }
 
-        public virtual ICollection<InvoiceItem> OnInvoices
+        public virtual ICollection<InvoiceItem> InvoiceItems
         {
             get;
             set;
