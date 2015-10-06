@@ -10,15 +10,12 @@ using InvoiceTest.Repositories;
 
 namespace InvoiceTest.Api
 {
+    [Authorize, RoutePrefix("api/products")]
     public class ProductController : ApiController
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductRepository _productRepository = new ProductRepository();
 
-        public ProductController(IProductRepository productRepository)
-        {
-            _productRepository = productRepository;
-        }
-
+        [HttpGet,Route("")]
         // GET api/<controller>
         public HttpResponseMessage Get()
         {
@@ -27,6 +24,7 @@ namespace InvoiceTest.Api
             return Request.CreateResponse(HttpStatusCode.OK, products);
         }
 
+        [HttpGet, Route("{id}")]
         // GET api/<controller>/5
         public HttpResponseMessage Get(int id)
         {

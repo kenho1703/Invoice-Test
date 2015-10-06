@@ -2,27 +2,40 @@
 using System.Collections.Generic;
 using System.Linq;
 using InvoiceTest.Models;
+using System.Data.Entity;
 
 namespace InvoiceTest.Repositories
 {
-    public class OnInvoiceRepository : IDisposable, IOnInvoiceRepository
+    public class InvoiceRepository : IDisposable, IInvoiceRepository
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
 
-        public IEnumerable<OnInvoice> GetAll()
+        public IEnumerable<Invoice> GetAll()
         {
-            return _db.OnInvoices;
+            return _db.Invoices;
         }
-        public OnInvoice GetById(int id)
+        public Invoice GetById(int id)
         {
-            return _db.OnInvoices.FirstOrDefault(p => p.Id == id);
+            return _db.Invoices.FirstOrDefault(p => p.Id == id);
         }
-        public void Add(OnInvoice onInvoice)
+        public void Add(Invoice invoice)
         {
-            _db.OnInvoices.Add(onInvoice);
+            _db.Invoices.Add(invoice);
             _db.SaveChanges();
         }
 
+        public void Update(int id, Invoice invoice)
+        {
+            _db.Entry(invoice).State = EntityState.Modified;
+            _db.SaveChanges();
+        }
+
+        public void Delete(Invoice invoice)
+        {
+            _db.Invoices.Remove(invoice);
+            _db.SaveChanges();
+
+        }
         protected void Dispose(bool disposing)
         {
             if (disposing)
@@ -40,5 +53,6 @@ namespace InvoiceTest.Repositories
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
     }
 }

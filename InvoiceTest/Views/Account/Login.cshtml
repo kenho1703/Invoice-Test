@@ -1,58 +1,69 @@
 ﻿@model InvoiceTest.Models.LoginViewModel
 
 @{
-    ViewBag.Title = "Log in";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Angular test | Angulr</title>
+    <meta name="description" content="Angularjs, Html5, Music, Landing, 4 in 1 ui kits package" />
+    <meta name="keywords" content="AngularJS, angular, bootstrap, admin, dashboard, panel, app, charts, components,flat, responsive, layout, kit, ui, route, web, app, widgets" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/Client/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/Client/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="/Client/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Client/css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/Client/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="/Client/css/app.css" type="text/css" />
+</head>
+<body>
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Use a local account to log in.</h4>
-                <hr />
-                @Html.ValidationSummary(true)
-                <div class="form-group">
-                    @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.UserName)
-                    </div>
+    <div class="app login-page">
+        <div class="container w-xxl w-auto-xs">
+            <a href class="navbar-brand block m-t">Invoice Test</a>
+            <div class="m-b-lg">
+                <div class="wrapper text-center">
+                    <strong>Sign in to get in touch</strong>
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password)
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-validation", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="text-danger wrapper text-center">
+                        @Html.ValidationSummary(true)
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+                        <div class="list-group list-group-sm">
+                            <div class="list-group-item">
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control no-border" , placeholder = "Email" })
+                                @*@Html.ValidationMessageFor(m => m.UserName)*@
+                            </div>
+                            <div class="list-group-item">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control no-border", placeholder = "Password" })
+                                @*@Html.ValidationMessageFor(m => m.Password)*@
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Log in" class="btn btn-default" />
-                    </div>
-                </div>
+
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Log in</button>
+                        <div class="text-center m-t m-b"><a href="#">Forgot password?</a></div>
+                        <div class="line line-dashed"></div>
+                        <p class="text-center"><small>Do not have an account?</small></p>
+
+                        @Html.ActionLink("Create an account", "Register", null, new { @class = "btn btn-lg btn-default btn-block" })
+                }
+            </div>
+            <div class="text-center">
                 <p>
-                    @Html.ActionLink("Register", "Register") if you don't have a local account.
+                    <small class="text-muted">Web app framework base on Bootstrap and AngularJS<br>&copy; 2014</small>
                 </p>
-            }
-        </section>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new { Action = "ExternalLogin", ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+</body>
+</html>

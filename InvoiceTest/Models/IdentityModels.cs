@@ -17,6 +17,8 @@ namespace InvoiceTest.Models
         }
 
         public DbSet<Product> Products { get; set; }
-        public DbSet<OnInvoice> OnInvoices { get; set; }
+        public DbSet<InvoiceItem> InvoiceItems { get; set; }
+
+        public DbSet<Invoice> Invoices { get; set; }
     }
 }

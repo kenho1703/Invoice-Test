@@ -1,40 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using InvoiceTest.Models;
+using InvoiceTest.Repositories;
 
 namespace InvoiceTest.Api
 {
-    public class InvoiceControllers : ApiController
+    [Authorize,RoutePrefix("api/invoices")]
+    public class InvoiceController : ApiController
     {
-        // GET: api/Invoice
-        public IEnumerable<string> Get()
+        private readonly IInvoiceRepository _invoiceRepository = new InvoiceRepository();
+
+        // GET api/<controller>
+        [Route(""),HttpGet]
+        public HttpResponseMessage Get()
         {
-            return new string[] { "value1", "value2" };
+            var invoices = _invoiceRepository.GetAll().ToList();
+
+            return Request.CreateResponse(HttpStatusCode.OK, invoices);
         }
 
-        // GET: api/Invoice/5
-        public string Get(int id)
+        // GET api/<controller>/5
+        [Route("{id}"), HttpGet]
+        public HttpResponseMessage Get(int id)
         {
-            return "value";
+            var invoice = _invoiceRepository.GetById(id);
+            if (invoice == null)
+                return Request.CreateResponse(HttpStatusCode.NotFound,
+                    new
+                    {
+                        errorMessage = "Requested Invoice not could not be found"
+                    });
+            return Request.CreateResponse(HttpStatusCode.OK, invoice);
+        }
+        [Route(""), HttpPost]
+        public HttpResponseMessage Post([FromBody] Invoice invoice)
+        {
+            _invoiceRepository.Add(invoice);
+            return Request.CreateResponse(HttpStatusCode.Created, invoice);
         }
 
-        // POST: api/Invoice
-        public void Post([FromBody]string value)
+        [Route("{id}"), HttpPut]
+        public HttpResponseMessage Put(int id, [FromBody] Invoice invoice)
         {
+            var data = _invoiceRepository.GetById(id);
+            if (data == null)
+                return Request.CreateResponse(HttpStatusCode.NotFound,
+                    new
+                    {
+                        errorMessage = "Requested Invoice not could not be found"
+                    });
+            _invoiceRepository.Update(id, invoice);
+            return Request.CreateResponse(HttpStatusCode.Created, invoice);
         }
 
-        // PUT: api/Invoice/5
-        public void Put(int id, [FromBody]string value)
+        [Route("{id}"), HttpDelete]
+        public HttpResponseMessage Delete(int id)
         {
+            var data = _invoiceRepository.GetById(id);
+            if (data == null)
+                return Request.CreateResponse(HttpStatusCode.NotFound,
+                    new
+                    {
+                        errorMessage = "Requested Invoice not could not be found"
+                    });
+            _invoiceRepository.Delete(data);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // DELETE: api/Invoice/5
-        public void Delete(int id)
-        {
-        }
     }
 }

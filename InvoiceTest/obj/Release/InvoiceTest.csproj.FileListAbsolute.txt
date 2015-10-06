@@ -56,9 +56,8 @@ D:\Projects\invoice-test\Invoice-Test\InvoiceTest\bin\System.Web.Razor.xml
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\bin\System.Web.WebPages.xml
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\bin\System.Web.WebPages.Razor.xml
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.Migrations.InitialCreate.resources
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.Migrations.addInvoiceTable.resources
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.csproj.GenerateResource.Cache
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.dll
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.pdb
-D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.Migrations.RenameOnInvoiceToInvoiceItem.resources
+D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Release\InvoiceTest.Migrations.InitialCreate.resources
+D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Release\InvoiceTest.csproj.GenerateResource.Cache
+D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Release\InvoiceTest.dll
+D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Release\InvoiceTest.pdb
+D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Release\InvoiceTest.Migrations.addInvoiceTable.resources
