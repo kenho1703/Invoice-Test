@@ -20,5 +20,18 @@ namespace InvoiceTest.Models
             get;
             set;
         }
+    }   
+    public class InvoicePost
+    {
+        public float VAT { get; set; }
+        public float SubTotal { get; set; }
+        public float Total { get; set; }
+        public float Shipping { get; set; }
+
+        public List<InvoiceItemPost> InvoiceItems
+        {
+            get;
+            set;
+        }
     }
 }

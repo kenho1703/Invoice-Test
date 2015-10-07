@@ -48,6 +48,24 @@ namespace InvoiceTest.Api
         {
             _invoiceRepository.Add(invoice);
             return Request.CreateResponse(HttpStatusCode.Created, invoice);
+        }       
+        [Route("invoiceItems"), HttpPost]
+        public HttpResponseMessage PostInvoiceItems([FromBody] InvoicePost data)
+        {
+            var invoiceItems = data.InvoiceItems.Select(invoiceItemPost => new InvoiceItem()
+            {
+                ProductId = invoiceItemPost.ProductId, Quantity = invoiceItemPost.Quantity, Price = invoiceItemPost.Price
+            }).ToList();
+            var invoice = new Invoice()
+            {
+                VAT = data.VAT,
+                Shipping = data.Shipping,
+                SubTotal = data.SubTotal,
+                Total = data.Total,
+                InvoiceItems = invoiceItems
+            };
+            _invoiceRepository.Add(invoice);
+            return Request.CreateResponse(HttpStatusCode.Created, invoice);
         }
 
         [Route("{id}"), HttpPut]
