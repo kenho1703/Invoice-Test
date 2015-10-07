@@ -5,9 +5,9 @@ using InvoiceTest.Models;
 
 namespace InvoiceTest.Repositories
 {
-    public class ProductRepository : IDisposable, IProductRepository
+    public class ProductRepository : IProductRepository
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
+        private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
         public IEnumerable<Product> GetAll()
         {
@@ -16,24 +16,6 @@ namespace InvoiceTest.Repositories
         public Product GetById(int id)
         {
             return _db.Products.FirstOrDefault(p => p.Id == id);
-        }
-
-        protected void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (_db != null)
-                {
-                    _db.Dispose();
-                    _db = null;
-                }
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }

@@ -62,10 +62,17 @@ D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.csproj.G
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.dll
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.pdb
 D:\Projects\invoice-test\Invoice-Test\InvoiceTest\obj\Debug\InvoiceTest.Migrations.RenameOnInvoiceToInvoiceItem.resources
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.InitialCreate.resources
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csproj.GenerateResource.Cache
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\InvoiceTest.dll.config
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\InvoiceTest.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\InvoiceTest.pdb
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Antlr3.Runtime.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.Owin.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Owin.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.WebApi.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\EntityFramework.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\EntityFramework.SqlServer.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Microsoft.AspNet.Identity.Core.dll
@@ -95,6 +102,11 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPage
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPages.Razor.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\WebGrease.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Antlr3.Runtime.pdb
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.Owin.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Owin.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.WebApi.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\EntityFramework.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\EntityFramework.SqlServer.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Microsoft.AspNet.Identity.Core.xml
@@ -123,11 +135,3 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPage
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.pdb
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csprojResolveAssemblyReference.cache
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.dll
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.dll
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.WebApi.dll
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.xml
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.xml
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.WebApi.xml
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.InitialCreate.resources
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csproj.GenerateResource.Cache

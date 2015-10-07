@@ -62,6 +62,7 @@ namespace InvoiceTest.Api
                 Shipping = data.Shipping,
                 SubTotal = data.SubTotal,
                 Total = data.Total,
+                Created =  DateTimeOffset.Now,
                 InvoiceItems = invoiceItems
             };
             _invoiceRepository.Add(invoice);

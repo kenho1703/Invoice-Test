@@ -1,0 +1,29 @@
+<div class="app invoice-page">
+
+    <div id="content" class="app-content" role="main">
+        <div class="app-content-body ">
+
+
+            <div class="bg-light lter b-b wrapper-md hidden-print">
+                <a href class="btn btn-sm btn-info pull-right" onClick="window.print();">Print</a>
+
+                <h1 class="m-n font-thin h3">Invoice</h1>
+            </div>
+            <div class="wrapper-md">
+                <div>
+                    <div ng-include="'Client/invoice/partials/invoice-info.html'"></div>
+                    <div class="line"></div>
+                    <button class="btn btn-primary m-b" ng-click="vm.addNewProduct()">
+                        <i class="fa fa-plus"></i>
+                        Add new product
+                    </button>
+                    <div ng-include="'Client/invoice/partials/invoice-detail.html'"></div>
+                    <button class="btn btn-primary pull-right" ng-click="vm.saveInvoice()">
+                        <i class="glyphicon glyphicon-floppy-save"></i>
+                        Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="Client/css/simple-line-icons.css" type="text/css" />
     <link rel="stylesheet" href="Client/css/font.css" type="text/css" />
     <link rel="stylesheet" href="Client/css/app.css" type="text/css" />
+    <link rel="stylesheet" href="Client/css/styles.css" type="text/css" />
 </head>
 <body ng-controller="AppCtrl">
-    <div class="app" id="app"
-          ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
+    <div class="app" id="app" ui-view></div>
 
 
     <!-- jQuery -->
@@ -53,19 +53,31 @@
     <script src="Client/js/config.lazyload.js"></script>
     <script src="Client/js/config.router.js"></script>
     <script src="Client/js/main.js"></script>
-    <script src="Client/js/services/ui-load.js"></script>
-    <script src="Client/js/filters/fromNow.js"></script>
-    <script src="Client/js/directives/setnganimate.js"></script>
-    <script src="Client/js/directives/ui-butterbar.js"></script>
-    <script src="Client/js/directives/ui-focus.js"></script>
-    <script src="Client/js/directives/ui-fullscreen.js"></script>
-    <script src="Client/js/directives/ui-jq.js"></script>
-    <script src="Client/js/directives/ui-module.js"></script>
-    <script src="Client/js/directives/ui-nav.js"></script>
-    <script src="Client/js/directives/ui-scroll.js"></script>
-    <script src="Client/js/directives/ui-shift.js"></script>
-    <script src="Client/js/directives/ui-toggleclass.js"></script>
-    <script src="Client/js/controllers/bootstrap.js"></script>
+    <script src="Client/services/ui-load.js"></script>
+
+
+    <script src="Client/services/product.service.js"></script>
+    <script src="Client/services/invoice.service.js"></script>
+
+    <script src="Client/invoice/invoice.controller.js"></script>
+
+
+
+
+    @*<script src="Client/js/directives/setnganimate.js"></script>
+        <script src="Client/js/directives/ui-butterbar.js"></script>
+        <script src="Client/js/directives/ui-focus.js"></script>
+        <script src="Client/js/directives/ui-fullscreen.js"></script>
+        <script src="Client/js/directives/ui-jq.js"></script>
+        <script src="Client/js/directives/ui-module.js"></script>
+        <script src="Client/js/directives/ui-nav.js"></script>
+        <script src="Client/js/directives/ui-scroll.js"></script>
+        <script src="Client/js/directives/ui-shift.js"></script>
+        <script src="Client/js/directives/ui-toggleclass.js"></script>*@
+
+
+
+
     <!-- Lazy loading -->
 </body>
 </html>

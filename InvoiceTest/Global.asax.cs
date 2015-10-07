@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -24,6 +25,7 @@ namespace InvoiceTest
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
         void RegisterAutoFac(HttpConfiguration config)
         {
             // Setup the Container Builder
@@ -31,20 +33,21 @@ namespace InvoiceTest
 
             // Register the controller in scope 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterApiControllers(typeof (MvcApplication).Assembly);
+            builder.RegisterApiControllers(Assembly.GetExecutingAssembly()).InstancePerDependency();
 
             // Register types
-            builder.RegisterType<ProductRepository>().As<IProductRepository>();
-            builder.RegisterType<InvoiceItemRepository>().As<IInvoiceItemRepository>();
-            builder.RegisterType<InvoiceRepository>().As<IInvoiceRepository>();
-
+            builder.RegisterType<ProductRepository>().As<IProductRepository>().InstancePerDependency();
+            builder.RegisterType<InvoiceItemRepository>().As<IInvoiceItemRepository>().InstancePerDependency();
+            builder.RegisterType<InvoiceRepository>().As<IInvoiceRepository>().InstancePerDependency();
             // Build the container
             var container = builder.Build();
-
+            //config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
             // Setup the dependency resolver
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             config.DependencyResolver = new AutoFacContainer(new AutofacDependencyResolver(container));
+            //app.UseAutofacMiddleware(container);
+            //app.UseAutofacMvc();
         }
     }
 }

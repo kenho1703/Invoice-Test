@@ -6,9 +6,9 @@ using System.Data.Entity;
 
 namespace InvoiceTest.Repositories
 {
-    public class InvoiceRepository : IDisposable, IInvoiceRepository
+    public class InvoiceRepository : IInvoiceRepository
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
+        private readonly ApplicationDbContext _db = new ApplicationDbContext();
 
         public IEnumerable<Invoice> GetAll()
         {
@@ -35,23 +35,6 @@ namespace InvoiceTest.Repositories
             _db.Invoices.Remove(invoice);
             _db.SaveChanges();
 
-        }
-        protected void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (_db != null)
-                {
-                    _db.Dispose();
-                    _db = null;
-                }
-            }
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
 
     }

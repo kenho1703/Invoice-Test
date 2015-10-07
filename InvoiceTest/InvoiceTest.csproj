@@ -46,16 +46,20 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Autofac, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.3.4.0\lib\net40\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.3.3.4\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    <Reference Include="Autofac.Integration.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Owin.3.1.0\lib\net45\Autofac.Integration.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -240,6 +244,7 @@
     <Content Include="Client\css\font-awesome.min.css" />
     <Content Include="Client\css\font.css" />
     <Content Include="Client\css\simple-line-icons.css" />
+    <Content Include="Client\css\styles.css" />
     <Content Include="Client\fonts\fontawesome-webfont.svg" />
     <Content Include="Client\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Client\fonts\Simple-Line-Icons.svg" />
@@ -337,12 +342,21 @@
     <Content Include="Client\js\directives\ui-shift.js" />
     <Content Include="Client\js\directives\ui-toggleclass.js" />
     <Content Include="Client\js\filters\fromNow.js" />
+    <Content Include="Client\invoice\invoice.controller.js" />
+    <Content Include="Client\invoice\invoice.html" />
+    <Content Include="Client\invoice\partials\invoice-detail.html" />
+    <Content Include="Client\invoice\partials\invoice-info.html" />
     <Content Include="Client\js\main.js" />
+    <Content Include="Client\js\services\invoice.service.js" />
+    <Content Include="Client\js\services\product.service.js" />
     <Content Include="Client\js\services\ui-load.js" />
+    <Content Include="Client\services\ui-load.js" />
     <Content Include="Client\l10n\de_DE.js" />
     <Content Include="Client\l10n\en.js" />
     <Content Include="Client\l10n\it_IT.js" />
     <Content Include="Client\psd\ui.png" />
+    <Content Include="Client\services\invoice.service.js" />
+    <Content Include="Client\services\product.service.js" />
     <Content Include="Client\tpl\app.html" />
     <Content Include="Client\tpl\apps_contact.html" />
     <Content Include="Client\tpl\apps_note.html" />
@@ -581,6 +595,7 @@
     <Content Include="Client\vendor\modules\angular-ui-grid\ui-grid.eot" />
     <Content Include="Client\vendor\modules\angular-ui-grid\ui-grid.ttf" />
     <Content Include="Client\vendor\modules\angular-ui-grid\ui-grid.woff" />
+    <Content Include="Client\invoice\invoice.less" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
