@@ -17,12 +17,12 @@ namespace InvoiceTest.Models
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<InvoiceItem>().HasRequired(p => p.Product)
                 .WithMany(b => b.InvoiceItems)
                 .HasForeignKey(p => p.ProductId);
             modelBuilder.Entity<InvoiceItem>().HasRequired(p => p.Invoice).WithMany(b => b.InvoiceItems)
                 .HasForeignKey(p => p.InvoiceId);
-            ;
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set; }

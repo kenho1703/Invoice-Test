@@ -13,7 +13,7 @@ namespace InvoiceTest.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201510051133365_InitialCreate"; }
+            get { return "201510070638126_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

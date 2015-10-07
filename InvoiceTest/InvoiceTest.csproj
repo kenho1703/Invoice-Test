@@ -202,17 +202,9 @@
     <Compile Include="Api\ProductController.cs" />
     <Compile Include="App_Start\AutofacScopeContainer.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Migrations\201510051133365_InitialCreate.cs" />
-    <Compile Include="Migrations\201510051133365_InitialCreate.Designer.cs">
-      <DependentUpon>201510051133365_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510060817093_addInvoiceTable.cs" />
-    <Compile Include="Migrations\201510060817093_addInvoiceTable.Designer.cs">
-      <DependentUpon>201510060817093_addInvoiceTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510061007573_RenameOnInvoiceToInvoiceItem.cs" />
-    <Compile Include="Migrations\201510061007573_RenameOnInvoiceToInvoiceItem.Designer.cs">
-      <DependentUpon>201510061007573_RenameOnInvoiceToInvoiceItem.cs</DependentUpon>
+    <Compile Include="Migrations\201510070638126_InitialCreate.cs" />
+    <Compile Include="Migrations\201510070638126_InitialCreate.Designer.cs">
+      <DependentUpon>201510070638126_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Api\InvoiceControllers.cs" />
@@ -636,7 +628,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\" />
-    <Folder Include="App_Data\" />
     <Folder Include="Client\js\controllers\uploads\" />
     <Folder Include="Views\Secret\" />
   </ItemGroup>
@@ -645,14 +636,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510051133365_InitialCreate.resx">
-      <DependentUpon>201510051133365_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510060817093_addInvoiceTable.resx">
-      <DependentUpon>201510060817093_addInvoiceTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510061007573_RenameOnInvoiceToInvoiceItem.resx">
-      <DependentUpon>201510061007573_RenameOnInvoiceToInvoiceItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510070638126_InitialCreate.resx">
+      <DependentUpon>201510070638126_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

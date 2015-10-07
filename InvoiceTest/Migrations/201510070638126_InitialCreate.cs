@@ -8,23 +8,40 @@ namespace InvoiceTest.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.OnInvoices",
+                "dbo.InvoiceItems",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Quantity = c.Int(nullable: false),
                         Price = c.Single(nullable: false),
                         ProductId = c.Int(nullable: false),
+                        InvoiceId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Invoices", t => t.InvoiceId, cascadeDelete: true)
                 .ForeignKey("dbo.Products", t => t.ProductId, cascadeDelete: true)
-                .Index(t => t.ProductId);
+                .Index(t => t.ProductId)
+                .Index(t => t.InvoiceId);
+            
+            CreateTable(
+                "dbo.Invoices",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Created = c.DateTimeOffset(nullable: false, precision: 7),
+                        VAT = c.Single(nullable: false),
+                        SubTotal = c.Single(nullable: false),
+                        Total = c.Single(nullable: false),
+                        Shipping = c.Single(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Products",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Description = c.String(),
                         Price = c.Single(nullable: false),
                     })
@@ -107,21 +124,24 @@ namespace InvoiceTest.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.OnInvoices", "ProductId", "dbo.Products");
+            DropForeignKey("dbo.InvoiceItems", "ProductId", "dbo.Products");
+            DropForeignKey("dbo.InvoiceItems", "InvoiceId", "dbo.Invoices");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.OnInvoices", new[] { "ProductId" });
+            DropIndex("dbo.InvoiceItems", new[] { "InvoiceId" });
+            DropIndex("dbo.InvoiceItems", new[] { "ProductId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Products");
-            DropTable("dbo.OnInvoices");
+            DropTable("dbo.Invoices");
+            DropTable("dbo.InvoiceItems");
         }
     }
 }

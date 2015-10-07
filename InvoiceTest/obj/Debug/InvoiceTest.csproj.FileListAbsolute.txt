@@ -120,10 +120,6 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.Razor.x
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPages.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPages.Deployment.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.WebPages.Razor.xml
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.InitialCreate.resources
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.addInvoiceTable.resources
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.RenameOnInvoiceToInvoiceItem.resources
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csproj.GenerateResource.Cache
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.pdb
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csprojResolveAssemblyReference.cache
@@ -133,3 +129,5 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integratio
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.Mvc.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Autofac.Integration.WebApi.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.Migrations.InitialCreate.resources
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csproj.GenerateResource.Cache
