@@ -31,16 +31,16 @@ namespace InvoiceTest.Migrations
             }
             var products = new List<Product>
             {
-                new Product { Description="product description", Name = "iPhone 5 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "iPad mini with Wi-Fi 32GB - White & Silver",   Price = 740}, 
-                new Product { Description="product description", Name = "iPhone 6 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "iPhone 5S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "iPhone 6S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "Nokia Lumina 720",   Price = 740}, 
-                new Product { Description="product description", Name = "Galaxy Note 5",   Price = 740}, 
-                new Product { Description="product description", Name = "iPhone 4 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "iPhone 6 Plus 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
-                new Product { Description="product description", Name = "Nokia 1280",   Price = 740},
+                new Product { Name="iPhone 5", Description = "iPhone 5 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="iPad mini", Description = "iPad mini with Wi-Fi 32GB - White & Silver",   Price = 740}, 
+                new Product { Name="iPhone 6 32GB", Description = "iPhone 6 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="iPhone 5S 32GB", Description = "iPhone 5S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="iPhone 6S 32GB", Description = "iPhone 6S 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="Nokia Lumina 720", Description = "Nokia Lumina 720",   Price = 740}, 
+                new Product { Name="Galaxy Note 5", Description = "Galaxy Note 5",   Price = 740}, 
+                new Product { Name="iPhone 4 32GB", Description = "iPhone 4 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="iPhone 6 Plus", Description = "iPhone 6 Plus 32GB White & Silver (GSM) Unlocked",   Price = 740}, 
+                new Product { Name="Nokia 1280", Description = "Nokia 1280",   Price = 150},
             };
             products.ForEach(s => context.Products.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();

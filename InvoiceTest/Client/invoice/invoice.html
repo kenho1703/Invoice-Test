@@ -1,13 +1,13 @@
-<div class="app invoice-page">
+<div class="invoice-page">
 
-    <div id="content" class="app-content" role="main">
+    <div id="content" class="app-content invoice-page" role="main">
         <div class="app-content-body ">
-
-
             <div class="bg-light lter b-b wrapper-md hidden-print">
-                <a href="" class="btn btn-sm btn-info pull-right" onClick="window.print();">Print</a>
+                <a href="" class="btn btn-sm btn-info pull-right" onclick="window.print();">Print</a>
 
                 <h1 class="m-n font-thin h3">Invoice</h1>
+                <toaster-container toaster-options="{'time-out': 3000,
+                'position-class': 'toast-top-right','close-button':true}"></toaster-container>
             </div>
             <div class="wrapper-md">
                 <div>
@@ -18,9 +18,10 @@
                         Add new product
                     </button>
                     <div ng-include="'Client/invoice/partials/invoice-detail.html'"></div>
-                    <button class="btn btn-primary pull-right" ng-click="vm.saveInvoice()">
+                    <button class="btn btn-primary pull-right" ng-disabled="!vm.invoice.InvoiceItems.length" ng-click="vm.saveInvoice()">
                         <i class="glyphicon glyphicon-floppy-save"></i>
-                        Save</button>
+                        Save
+                    </button>
                 </div>
             </div>
         </div>

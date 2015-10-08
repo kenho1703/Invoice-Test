@@ -4,9 +4,8 @@
 	angular.module('app').factory('InvoiceServices', InvoiceServices);
 	function InvoiceServices($http) {
 
-	    console.log($http);
 		var service = {
-			createInvoice: createInvoice
+		    createInvoice: createInvoice
 		};
 		return service;
 

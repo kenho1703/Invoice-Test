@@ -1,4 +1,4 @@
-<div ng-if="!vm.invoice.products.length">
+<div ng-if="!vm.invoice.InvoiceItems.length">
     <p class="b wrapper-sm pos-rlt bg-primary  r r-2x">
         <span class="arrow top pull-left arrow-primary"></span>
         <span class="block">There are not product in invoice, please add product!</span>
@@ -18,30 +18,29 @@
     </thead>
     <tbody>
 
-    <tr ng-repeat="product in vm.invoice.InvoiceItems">
-        <td>
-            <select class="form-control" ng-model="vm.invoice.InvoiceItems[$index]"
-                    ng-options="item as item.Name for item in vm.products">
-            </select>
-        </td>
-        <td>
-            <input class="edit form-control" type="text" readonly ng-model="vm.invoice.InvoiceItems[$index].Description" required>
-        </td>
-        <td>
-            <input class="edit form-control" type="text" ng-model="vm.invoice.InvoiceItems[$index].Quantity" required>
-        </td>
-        <td>
-            <input class="edit form-control" type="text" readonly ng-model="vm.invoice.InvoiceItems[$index].Price" required>
-        </td>
-        <td>
-            <span>{{vm.getSubPrice(product) | currency }}</span>
-        </td>
-        <td class="td-action text-center">
-            <a href="" class="m-xs " ng-click="vm.removeProduct($index)">
-                <i class="fa fa-trash-o text-danger text"></i>
-            </a>
-        </td>
-    </tr>
+        <tr ng-repeat="product in vm.invoice.InvoiceItems track by $index">
+            <td>
+                <select class="form-control" ng-init="vm.invoice.InvoiceItems[$index] = vm.products[0]" ng-model="vm.invoice.InvoiceItems[$index]"
+                        ng-options="item as item.Name for item in vm.products"></select>
+            </td>
+            <td>
+                <input class="edit form-control" type="text" readonly ng-model="vm.invoice.InvoiceItems[$index].Description" required>
+            </td>
+            <td>
+                <input class="edit form-control" type="text" ng-model="vm.invoice.InvoiceItems[$index].Quantity" required>
+            </td>
+            <td>
+                <input class="edit form-control" type="text" readonly ng-model="vm.invoice.InvoiceItems[$index].Price" required>
+            </td>
+            <td>
+                <span>{{vm.getSubPrice(product) | currency }}</span>
+            </td>
+            <td class="td-action text-center">
+                <a href="" class="m-xs " ng-click="vm.removeProduct($index)">
+                    <i class="fa fa-trash-o text-danger text"></i>
+                </a>
+            </td>
+        </tr>
 
     <tr>
         <td colspan="4" class="text-right"><strong>Subtotal</strong></td>

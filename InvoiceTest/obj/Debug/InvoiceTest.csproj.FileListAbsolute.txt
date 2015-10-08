@@ -85,6 +85,8 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Newtonsoft.Json.dl
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.Common.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.Mvc.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.dll
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.WebHost.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Owin.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Net.Http.Formatting.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.Helpers.dll
@@ -117,6 +119,8 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Newtonsoft.Json.xm
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.Common.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.Mvc.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.xml
+D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.WebHost.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Net.Http.Formatting.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.Helpers.xml
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\System.Web.Http.xml
@@ -132,7 +136,3 @@ D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.dll
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.pdb
 D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\obj\Debug\InvoiceTest.csprojResolveAssemblyReference.cache
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.dll
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.xml
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.WebHost.dll
-D:\projects\.Net Projects\Invoice-Test-newest\InvoiceTest\bin\Ninject.Web.WebApi.WebHost.xml

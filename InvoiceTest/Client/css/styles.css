@@ -2,17 +2,30 @@
     margin-left: 0;
 }
 
-.invoice-page .app-content .td-action {
-    padding: 8px;
-}
+    .invoice-page .app-content .td-action {
+        padding: 8px;
+    }
 
-.invoice-page .app-content .td-action a i {
-    font-size: 18px;
-    padding: 6px 0;
-}
+        .invoice-page .app-content .td-action a i {
+            font-size: 18px;
+            padding: 6px 0;
+        }
 
-.form-control[readonly]{
+.form-control[readonly] {
     cursor: not-allowed;
     background-color: #fff;
     opacity: 1;
 }
+
+#logoutForm {
+    margin-right: 0;
+}
+
+    #logoutForm .navbar-right {
+        margin-right: 0;
+    }    
+    #logoutForm span {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        display: block;
+    }
