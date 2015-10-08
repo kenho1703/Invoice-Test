@@ -20,15 +20,15 @@ function InvoiceCtrl(InvoiceServices, products) {
     vm.decorateProducts = function () {
         var temp = [];
         if (vm.products && vm.products.length > 0) {
-            vm.products.forEach(function (product) {
+            vm.products.forEach(function(product) {
                 temp.push({
-                    Id: product.Id,
+                    ProductId: product.Id,
                     Quantity: 1,
                     Description: product.Description,
                     Price: product.Price,
                     Name: product.Name
                 });
-            })
+            });
             vm.products = temp;
         }
     };
@@ -89,10 +89,10 @@ function InvoiceCtrl(InvoiceServices, products) {
         console.info("Save invoice: ", vm.invoice);
         InvoiceServices.createInvoice(vm.invoice).then(
             function (data) {
-                console.log(data)
+                console.log(data);
             }, function (error) {
-                console.log(error)
-            });
+            console.log(error);
+        });
     };
 
     vm.decorateProducts();
