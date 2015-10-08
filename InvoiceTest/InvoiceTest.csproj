@@ -411,6 +411,7 @@
     <Content Include="Client\vendor\modules\angular-ui-grid\ui-grid.ttf" />
     <Content Include="Client\vendor\modules\angular-ui-grid\ui-grid.woff" />
     <Content Include="Client\invoice\invoice.less" />
+    <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -456,7 +457,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
